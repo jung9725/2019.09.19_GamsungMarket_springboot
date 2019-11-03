@@ -59,10 +59,9 @@ div .title {
 
 	<input type="hidden" id="keyword" th:value="${keyword}">
 	<!-- Products -->
-	<div class="products" id="products">
+	<div class="products" >
 	
-		<!-- <div class="container">
-			Product Sorting
+		<div class="container">
 			
 			<form action="/product/categories" method="get">
 				<div class="sorting_bar d-flex flex-md-row flex-column align-items-md-center justify-content-md-start">
@@ -89,7 +88,7 @@ div .title {
 					</div>
 				</div>
 				<div class="product_grid">
-					Product
+					
 					<div class="product" th:if="${ #lists.size(products) } > 0" th:each="product : ${products}">
 					
 						<div class="product_image" >
@@ -143,7 +142,7 @@ div .title {
 				  </nav>
 				</div>
 			</form>
-			</div> -->
+			</div>
 		</div>
 		
 		<script th:src="@{/js/jquery-3.2.1.min.js}"></script>

@@ -99,16 +99,6 @@ public class ProductController {
 
 	@GetMapping(path = "/categories")
 	public String productList(Model model, String type ,String category, String keyword) {
-		int pageNo = 0;
-		if(pageNo == 0) {
-			pageNo=1;
-		}
-		
-		int pageSize = 8;
-		int currentPage = pageNo;
-
-		int from = (currentPage - 1) * pageSize + 1;
-		int to = from + pageSize;
 
 
 		if (type == null) {
@@ -125,8 +115,6 @@ public class ProductController {
 		
 
 		HashMap<String, Object> params = new HashMap<String, Object>();
-		params.put("from", from-1);
-		params.put("to", to);
 		params.put("type", type);
 		params.put("category", category);
 		params.put("keyword", keyword);

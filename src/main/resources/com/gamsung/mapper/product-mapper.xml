@@ -25,17 +25,16 @@
 		<include refid="productColumns" />
 		from product
 		WHERE deleted = false and count <![CDATA[>]]> 0
-		<!-- <if test='type != "all"'>
+		<if test='type != "all"'>
 			and type = #{ type }
 		</if>
 		<if test='category != "every"'>
 			and category = #{ category }
-		</if> -->
+		</if>
 		<if test="keyword != ''">
 			and name like concat('%', #{ keyword }, '%')
 		</if>
 		order by product_no desc
-		<!-- limit #{from}, #{to} -->
 	</select>
 	
 	<update id="deleteProduct" parameterType="int">
